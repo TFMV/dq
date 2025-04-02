@@ -98,6 +98,62 @@ load_task >> validate_data >> downstream_task
 
 This simplicity belies the sophisticated engine working behind the scenes—again reflecting how well-designed documentation presents complex concepts in manageable pieces.
 
+## Where Documentation Meets Implementation
+
+To truly appreciate how DQOps's design-first approach shines through both documentation and functionality, let's examine one specific feature: the "number found in set percent" data quality check.
+
+Consider a common data challenge: ensuring values in a numeric column conform to an expected set—perhaps status codes, category identifiers, or rating scales. In traditional tools, this would require custom SQL queries for measurement, separate logic for validation, and yet more code for alerting.
+
+DQOps's documentation for this check illustrates their unified approach perfectly:
+
+1. **Clear, Contextual Definition**: The documentation begins with a precise explanation: "A column-level check that calculates the percentage of rows for which the tested numeric column contains a value from a set of expected values." It immediately adds business context: "This check is useful for columns that store numeric codes (such as status codes)."
+
+2. **Visual Organization**: The information is structured in a logical hierarchy—from overview to variants (profiling, daily, monthly) to implementation details. Navigation is intuitive with a clear table of contents.
+
+3. **Multi-Format Examples**: The documentation provides examples in multiple forms: YAML configuration, command-line commands, and most impressively, the actual SQL templates for different database systems (MySQL, SQL Server, Teradata, Trino).
+
+What's remarkable is how the documentation matches the system's implementation:
+
+```yaml
+# From the documentation - YAML configuration example
+columns:
+  target_column:
+    profiling_checks:
+      accepted_values:
+        profile_number_found_in_set_percent:
+          parameters:
+            expected_values: [2, 3]
+          warning:
+            min_percent: 95
+          error:
+            min_percent: 90
+```
+
+This YAML isn't just an example—it's the actual configuration you'd use. Notice how readable it is—a clear hierarchy that mirrors the mental model: column > check type > specific check > parameters > threshold levels.
+
+Behind this simple configuration is a sophisticated implementation. The documentation reveals the actual SQL template:
+
+```sql
+SELECT
+  CASE
+    WHEN COUNT(analyzed_table.`target_column`) = 0 THEN 100.0
+    ELSE 100.0 * SUM(
+      CASE
+        WHEN analyzed_table.`target_column` IN (2, 3)
+          THEN 1
+        ELSE 0
+      END
+    ) / COUNT(analyzed_table.`target_column`)
+  END AS actual_value,
+  ...
+```
+
+This transparency is unprecedented. Most platforms hide their implementation details, but DQOps exposes them—not just as reference material but as learning tools. You can understand not just what the check does but how it works.
+
+The brilliance of this approach is that despite exposing complexity, using the feature remains simple. A data engineer can configure this check in seconds through the UI or a few lines of YAML, yet still have access to the complete technical details when needed.
+
+This pattern—clear conceptual explanation, intuitive configuration, and transparent implementation—repeats across hundreds of checks in the documentation. It's a masterclass in how to document complex functionality in a way that serves both novice and expert users.
+
 ## The Architecture of Trust
 
 The parallels between well-designed documentation and effective data quality practices became increasingly apparent as I worked with DQOps. Both share foundational principles:
