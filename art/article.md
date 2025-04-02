@@ -5,31 +5,31 @@
 > "Our documentation was 'not written.' It was first 'designed,' and we filled in the content."
 > — Piotr Czarnas, creator of DQOps
 
-In most engineering teams, documentation is an afterthought. It’s what you slap together before launch—or worse, after. A formality. A chore.
+In most engineering teams, documentation is an afterthought. It's what you slap together before launch—or worse, after. A formality. A chore.
 
-But DQOps, a modern data quality platform, flips that script. Its documentation doesn’t feel like an appendix—it feels like part of the product. Structured, clear, and deeply intentional. It reads like something built with the same precision as the system it describes.
+But DQOps, a modern data quality platform, flips that script. Its documentation doesn't feel like an appendix—it feels like part of the product. Structured, clear, and deeply intentional. It reads like something built with the same precision as the system it describes.
 
 And that made something click for me.
 
 Maybe the reason DQOps gets data quality right is the same reason its documentation stands out: both were designed—not just assembled.
 
-The best documentation, like the best data pipelines, is built on trust, transparency, and structure. And DQOps doesn’t just document those values—it embodies them.
+The best documentation, like the best data pipelines, is built on trust, transparency, and structure. And DQOps doesn't just document those values—it embodies them.
 
-## Documentation as Interface
+## Docs That Don't Just Describe—They Deliver
 
 Most open source projects evolve in bursts—features come fast, and documentation lags behind, gasping for air. Developers learn to live with it. You skim the README, squint at a half-written guide, and hope the source code tells the rest of the story.
 
 DQOps breaks that pattern.
 
-Its documentation doesn’t feel bolted on. It feels baked in. From the moment you open the repo, it’s clear: this system was documented as it was built, not after the fact. The /docs directory isn’t a dumping ground—it’s a structured knowledge system. Architecture, workflows, configuration, rule design—it’s all there, organized intentionally.
+Its documentation doesn't feel bolted on. It feels baked in. From the moment you open the repo, it's clear: this system was documented as it was built, not after the fact. The /docs directory isn't a dumping ground—it's a structured knowledge system. Architecture, workflows, configuration, rule design—it's all there, organized intentionally.
 
-They even have a documentation guide that serves as a kind of table of contents for the reader’s mental model. You don’t have to guess where to start. You don’t have to reverse-engineer the system just to get your bearings.
+They even have a documentation guide that serves as a kind of table of contents for the reader's mental model. You don't have to guess where to start. You don't have to reverse-engineer the system just to get your bearings.
 
-The architecture docs are a standout. Instead of listing components in isolation, they present the system as a living whole—complete with deployment topologies and real-world scenarios. The diagrams don’t just show what is—they suggest what could be. That’s rare.
+The architecture docs are a standout. Instead of listing components in isolation, they present the system as a living whole—complete with deployment topologies and real-world scenarios. The diagrams don't just show what is—they suggest what could be. That's rare.
 
 This kind of documentation helps everyone. New users get an on-ramp. Power users get a framework to think through extensions and edge cases. And maintainers get fewer support questions because the answers are already where they belong.
 
-DQOps treats documentation like an interface—one that’s just as important as the CLI or the UI.
+DQOps treats documentation like an interface—one that's just as important as the CLI or the UI.
 
 ## Architecture That Embodies Design-First Principles
 
@@ -98,7 +98,7 @@ load_task >> validate_data >> downstream_task
 
 This simplicity belies the sophisticated engine working behind the scenes—again reflecting how well-designed documentation presents complex concepts in manageable pieces.
 
-## When Data Quality Mirrors Documentation Quality
+## The Architecture of Trust
 
 The parallels between well-designed documentation and effective data quality practices became increasingly apparent as I worked with DQOps. Both share foundational principles:
 
@@ -108,21 +108,21 @@ The parallels between well-designed documentation and effective data quality pra
 
 3. **Usability trumps comprehensiveness**: Rather than overwhelming users with every possible detail, DQOps documentation prioritizes practical workflows. Their data quality system applies the same principle—rather than scanning entire datasets with every possible check, they've designed incremental, optimized evaluations that can run efficiently in production.
 
-The synergy between these approaches isn't coincidental. As I explored the platform further, I realized DQOps had fundamentally reimagined what data quality tools could be by applying the same design principles to both product and documentation.
+The synergy between these approaches isn't coincidental. DQOps has fundamentally reimagined what data quality tools could be by applying the same design principles to both product and documentation.
 
 ## Designed to Teach, Not Just Explain
 
-Data quality is messy. It straddles business logic, technical validation, and statistical nuance. And learning a new platform in this space? Even messier. It’s easy to get lost before you’ve even found your footing.
+Data quality is messy. It straddles business logic, technical validation, and statistical nuance. And learning a new platform in this space? Even messier. It's easy to get lost before you've even found your footing.
 
 What makes DQOps stand out is how its documentation meets you where you are—and guides you forward.
 
-Take the architecture docs. They don’t start with a flood of implementation details. They start with a bird’s-eye view—how the pieces fit, how they talk to each other, how the whole thing works. Only after you’ve built that mental map do the specifics come into focus.
+Take the architecture docs. They don't start with a flood of implementation details. They start with a bird's-eye view—how the pieces fit, how they talk to each other, how the whole thing works. Only after you've built that mental map do the specifics come into focus.
 
-The same rhythm shows up across the board. Checks, sensors, rules—each introduced with clarity and context before diving into mechanics. You’re never just handed a config file and told “figure it out.” There’s a deliberate arc: understand, define, validate. It mirrors the very way DQOps approaches data quality itself.
+The same rhythm shows up across the board. Checks, sensors, rules—each introduced with clarity and context before diving into mechanics. You're never just handed a config file and told "figure it out." There's a deliberate arc: understand, define, validate. It mirrors the very way DQOps approaches data quality itself.
 
-Even the way you move through the docs feels intentional. Related ideas are linked. Examples are practical, not toy problems. References and walkthroughs are clearly separated so you’re not flipping between use case and spec.
+Even the way you move through the docs feels intentional. Related ideas are linked. Examples are practical, not toy problems. References and walkthroughs are clearly separated so you're not flipping between use case and spec.
 
-This isn’t just good documentation. It’s good pedagogy. It’s a system designed to teach, not just inform.
+This isn't just good documentation. It's good pedagogy. It's a system designed to teach, not just inform.
 
 ## Enterprise Clarity in a World of Data Complexity
 
@@ -152,13 +152,13 @@ The same applies to data quality initiatives. Rather than jumping straight to im
 
 ## Designed, Then Built
 
-What DQOps gets right isn’t just about documentation. It’s a broader truth that echoes across software, data, and the systems that bind them: design-first thinking leads to better outcomes.
+What DQOps gets right isn't just about documentation. It's a broader truth that echoes across software, data, and the systems that bind them: design-first thinking leads to better outcomes.
 
-When we start with structure—when we prioritize clarity, intent, and usability—we build systems that hold up under pressure. Systems that are easier to understand, easier to extend, and far less likely to surprise us in production.
+Start with structure. Prioritize clarity, intent, and usability. That's how you build systems that hold up under pressure. Systems that are easier to understand, easier to extend, and far less likely to surprise us in production.
 
 That applies to documentation. It applies to data quality. It applies to almost everything we ship.
 
-The next time you’re tempted to bolt on docs after the fact, or slap in a data check without thinking through the bigger picture, remember what DQOps quietly demonstrates:
+The next time you're tempted to bolt on docs after the fact, or slap in a data check without thinking through the bigger picture, remember what DQOps quietly demonstrates:
 
-The strongest systems aren’t patched together.
-They’re designed first and written second.
+The strongest systems aren't patched together.
+They're designed first and written second.
